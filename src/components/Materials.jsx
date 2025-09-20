@@ -7,7 +7,7 @@ export default function Materials() {
   ];
 
   return (
-    <>
+    <section id="materials" className="py-12 w-full">
       <div className="text-center mb-12">
         <div className="text-center">
         <h2 className="text-black px-4 py-2 rounded tracking-wider text-[2vw]">МАТЕРІАЛИ</h2>
@@ -28,6 +28,6 @@ export default function Materials() {
           </div>
         ))}
       </div>
-    </>
+    </section>
   );
 }

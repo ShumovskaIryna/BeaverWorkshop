@@ -61,4 +61,7 @@ body {
   animation: scale-slide-right 1s ease-out forwards;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 

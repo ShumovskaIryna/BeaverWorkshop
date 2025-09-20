@@ -20,8 +20,8 @@ export default function Hero() {
                 & WINDOWSILLS & SHELVES
             </h2>
         </div>
-        <button className="absolute bottom-6 left-3 hover:scale-105 transition">
-          <img src="/images/BTN.png" alt="Замовити" className="w-[58vw] h-auto" />
+        <button className="absolute bottom-0 left-1 hover:scale-105 transition">
+          <img src="/images/BTN.png" alt="Замовити" className="w-[62vw] h-auto" />
         </button>
       </div>
         {/* Desktop Version */}
