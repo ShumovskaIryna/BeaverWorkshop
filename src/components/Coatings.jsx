@@ -1,46 +1,67 @@
 import Image from "next/image";
+
 export default function Coatings() {
-  const materials = [
-    { id: 1, name: 'ЯСЕНЬ', description: 'Твердий та довговічний матеріал з виразною текстурою.', imageSrc: '/images/ash.png' },
-    { id: 2, name: 'ВІЛЬХА', description: 'М\'яке дерево з приємним червонуватим відтінком.', imageSrc: '/images/alder.png' },
-    { id: 3, name: 'ДУБ', description: 'Міцний, стійкий до зношування, з характерною текстурою.', imageSrc: '/images/oak.png' },
-    { id: 4, name: 'ГОРІХ', description: 'Має темний відтінок і гарно виглядає в інтер\'єрі.', imageSrc: '/images/walnut.png' },
+  const coatings = [
+    {
+      id: 1,
+      name: "ОЛІЯ-ВІСК",
+      description:
+        "Створює теплий, природний вигляд деревини та приємну на дотик поверхню",
+      imageSrc: "/images/oilwax.png",
+    },
+    {
+      id: 2,
+      name: "МІЦНИЙ ВІСК",
+      description:
+        "Створює додатковий захист від подряпин і вологи, додає блиску та гладкості.",
+      imageSrc: "/images/strongwax.png",
+    },
+    {
+      id: 3,
+      name: "ПОЛІУРЕТАНОВИЙ ЛАК",
+      description:
+        "Міцне прозоре покриття, що утворює захисну плівку та забезпечує довговічність.",
+      imageSrc: "/images/lacquer.png",
+    },
+    {
+      id: 4,
+      name: "2K ЕМАЛЬ",
+      description:
+        "Кольорове, стійке до зносу та вологи покриття, ідеальне для яскравих інтер'єрів.",
+      imageSrc: "/images/enamel.png",
+    },
   ];
 
   return (
-    <>
-      {/* <div className="text-center mb-12">
-        <div className="text-center">
-        <h2 className="text-black px-4 py-2 rounded tracking-wider text-[2vw]">МАТЕРІАЛИ</h2>
-        </div>
-        <p className="text-lg text-gray-600 mt-2">Ми працюємо з різними типами деревини для створення якісних виробів</p>
+    <section id="coatings" className="py-14 w-full relative">
+      {/* Заголовок */}
+      <div className="text-center mb-10">
+        <h2 className="text-black tracking-wider text-[clamp(22px,5vw,32px)] font-semibold">
+          ПОКРИТТЯ
+        </h2>
       </div>
 
-      <div className="container w-[80vw] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {materials.map((material) => (
-          <div key={material.id} className="p-6 flex flex-col items-center">
+      {/* Сітка карток */}
+      <div className="mx-auto w-[90vw] md:w-[80vw] grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        {coatings.map((coating) => (
+          <div
+            key={coating.id}
+            className="flex flex-col items-center text-center p-4"
+          >
             <img
-              src={material.imageSrc}
-              alt={material.name}
-              className="w-full h-auto object-cover mb-4 rounded-md"
+              src={coating.imageSrc}
+              alt={coating.name}
+              className="w-[clamp(120px,28vw,180px)] h-auto object-contain mb-3 sm:mb-4"
             />
-            <h3 className="text-[1.4vw] font-regular mb-4">{material.name}</h3>
-            <p className="text-gray-600 text-center">{material.description}</p>
+            <h3 className="text-[clamp(16px,5vw,20px)] font-semibold text-[#2b2b2b] mb-2">
+              {coating.name}
+            </h3>
+            <p className="text-[clamp(13px,4vw,15px)] text-gray-600 leading-snug">
+              {coating.description}
+            </p>
           </div>
-        ))} 
-      </div>*/}
-              <div className="w-full text-center max-w-8xl top-0 relative mb-0">
-           <h2 className="text-black px-4 py-2 rounded tracking-wider text-[2vw]">ПОКРИТТЯ</h2>
-        </div>
-        <div className="relative w-[80vw] aspect-[4/1] mb-20">
-               <Image
-                src="/images/Top.png"
-                alt="Main Photo"
-                layout="fill"
-                objectFit="cover"
-                priority
-                />
-        </div>
-    </>
+        ))}
+      </div>
+    </section>
   );
 }

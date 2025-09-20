@@ -54,12 +54,17 @@ export default function ServicesSection() {
             key={index}
             className="flex flex-col lg:flex-row items-start justify-between gap-6"
           >
-            {/* ID */}
-            <div className="lg:w-1/10">
-              <div className="text-[#4e3f3f] font-bold text-[clamp(28px,7vw,40px)]">
-                {service.id}
-              </div>
+        {/* ID */}
+          <div className="lg:w-1/10 flex justify-center lg:justify-start">
+            <div
+              className="font-bold text-[clamp(48px,12vw,80px)] text-[#4e3f3f]"
+              style={{
+                WebkitTextStroke: "2px #6b4b36"
+              }}
+            >
+              {service.id}
             </div>
+          </div>
 
             {/* Text */}
             <div className="lg:w-6/10 space-y-3">
