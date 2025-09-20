@@ -11,7 +11,7 @@
   --color-foreground: var(--foreground);
 
   --color-brand-primary: #156f2d; /* зелений "дерево" */
-  --color-brand-accent:  #e6a14a; /* теплий акцент */
+  --color-brand-accent:  #236a3b; /* зелений акцент */
   --color-brand-dark:    #1a1a1a; /* темний текст */
 }
 
@@ -53,7 +53,7 @@ body {
     transform: scale(1) translateX(0) translateY(0);
   }
   100% {
-    transform: scale(0.5) translateX(500px) translateY(250px);
+    transform: scale(0.6) translateX(320px) translateY(140px);
   }
 }
 
