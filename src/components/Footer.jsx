@@ -1,53 +1,97 @@
-// app/components/Footer.jsx
+"use client"
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
-  return (
-    <footer className="bg-[#f8f5f2] text-[#3e2f1c] py-10 mt-20">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-        
-        {/* Логотип та опис */}
-        <div>
-          <h2 className="text-2xl font-bold mb-4">Beaver Workshop</h2>
-          <p>
-            Виготовляємо двері, сходи, підвіконня, столи та інші вироби з дерева
-            (ясень, дуб, вільха, горіх). Безкоштовна консультація та прорахунок.
-          </p>
-        </div>
+  const year = new Date().getFullYear();
 
-        {/* Меню */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Меню</h3>
-          <ul className="space-y-2">
-            <li><Link href="/">Головна</Link></li>
-            <li><Link href="/portfolio">Портфоліо</Link></li>
-            <li><Link href="/contacts">Контакти</Link></li>
-            <li><Link href="/about">Про нас</Link></li>
-          </ul>
-        </div>
+  return (
+    <footer className="w-full py-10">
+      <div
+        className="
+          mx-auto w-[90vw] md:w-[80vw]
+          relative rounded-3xl overflow-hidden
+          "
+        style={{
+          backgroundImage: "url('/images/footer.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* затемнення для контрасту тексту */}
+        <div className="absolute inset-0 bg-[#4b3d32]/85" />
+
+        {/* контент */}
+        <div className="relative z-10 px-6 sm:px-15 py-8">
+          {/* верхня частина: 4 колонки */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+            {/* Лого + копірайт (ліворуч) */}
+            <div className="space-y-4">
+              <Link href="/" aria-label="На головну">
+                <Image
+                  src="/images/Logo.png"
+                  alt="Beaver Workshop"
+                  width={180}
+                  height={90}
+                  className="w-[160px] sm:w-[180px] h-auto"
+                  priority
+                />
+              </Link>
+              <p className="text-white/80 text-[clamp(13px,3.8vw,14px)]">
+                Усі права захищені — {year}
+              </p>
+            </div>
+
+            {/* Меню сайту */}
+            <nav className="text-white/90">
+              <ul className="space-y-3 text-[clamp(14px,4.2vw,16px)] tracking-wide">
+                <li><Link href="/" className="hover:opacity-90">Головна</Link></li>
+                 <li><Link href="/about" className="hover:opacity-90">Про нас</Link></li>
+                <li><Link href="/portfolio" className="hover:opacity-90">Портфоліо</Link></li>
+                <li><Link href="/contact" className="hover:opacity-90">Контакти</Link></li>
+              </ul>
+            </nav>
 
         {/* Контакти */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Контакти</h3>
-          <p>📞 +380 67 123 45 67</p>
-          <p>✉️ info@woodmaster.com</p>
-          <p>📍 Київ, Україна</p>
-          <p>🕒 Пн–Пт: 9:00–18:00</p>
-        </div>
+            <div className="text-white/90">
+              <ul className="space-y-3 text-[clamp(14px,4.2vw,16px)] tracking-wide">
+                <li><p>📞 +380 67 123 45 67</p></li>
+                 <li> <p>✉️ beaver@gmail.com</p></li>
+                <li><p>📍 Іванків, Україна</p></li>
+                <li><p>🕒 Пн–Пт: 9:00–18:00</p></li>
+              </ul>     
+            </div>
+            {/* Контакти + соцмережі + up */}
+            <div className="flex flex-col items-start gap-4">
 
-        {/* Соцмережі */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Ми в соцмережах</h3>
-          <div className="flex space-x-4 text-2xl">
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
+              {/* кнопка вгору */}
+               <button
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className="mt-2 mb-8 inline-flex items-center justify-center rounded-full border border-white/60 text-white/90 h-10 w-10 hover:bg-white/10"
+              >
+                <span className="text-2xl leading-none">↑</span>
+              </button>
+               <div className="flex items-center gap-4">
+                <a
+                  href="https://www.instagram.com/beaver_workshop.l.v/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <Image src="/images/instagram.png" alt="" width={32} height={32} />
+                </a>
+                <a
+                  href="https://t.me/your_telegram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Telegram"
+                >
+                  <Image src="/images/telegram.png" alt="" width={32} height={32} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="mt-8 border-t border-[#d6cfc7] pt-4 text-center text-sm">
-        © {new Date().getFullYear()} Beaver Workshop. Всі права захищені.
       </div>
     </footer>
   );

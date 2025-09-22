@@ -4,25 +4,25 @@ export default function Materials() {
       id: 1,
       name: 'ЯСЕНЬ',
       description: 'Твердий та довговічний матеріал з виразною текстурою.',
-      imageSrc: '/images/ash.png',
+      imageSrc: '/images/ashh.png',
     },
     {
       id: 2,
       name: 'ВІЛЬХА',
       description: "М'яке дерево з приємним червонуватим відтінком.",
-      imageSrc: '/images/alder.png',
+      imageSrc: '/images/ald.png',
     },
     {
       id: 3,
       name: 'ДУБ',
       description: 'Міцний, стійкий до зношування, з характерною текстурою.',
-      imageSrc: '/images/oak.png',
+      imageSrc: '/images/oakk.png',
     },
     {
       id: 4,
       name: 'ГОРІХ',
       description: "Має темний відтінок і гарно виглядає в інтер'єрі.",
-      imageSrc: '/images/walnut.png',
+      imageSrc: '/images/nut.png',
     },
   ];
 
@@ -32,7 +32,7 @@ export default function Materials() {
       className="relative py-14 w-full bg-cover bg-center"
       style={{ backgroundImage: "url('/images/s2.png')" }}
     >
-     <div className="absolute inset-0 bg-[var(--background)]/90"></div>
+     <div className="absolute inset-0 bg-[var(--background)]/80"></div>
       <div className="relative z-10">
         {/* Заголовок */}
         <div className="text-center mb-10">
@@ -59,7 +59,7 @@ export default function Materials() {
               <h3 className="text-[clamp(16px,5vw,20px)] font-semibold text-[#2b2b2b] mb-2">
                 {material.name}
               </h3>
-              <p className="text-[clamp(13px,4vw,15px)] text-gray-600 leading-snug">
+              <p className="text-[clamp(13px,4vw,15px)] text-gray-900 leading-snug">
                 {material.description}
               </p>
             </div>

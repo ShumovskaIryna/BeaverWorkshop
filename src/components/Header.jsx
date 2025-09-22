@@ -7,7 +7,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-stone-800 text-white">
+    <header className="sticky top-0 z-50 w-full bg-stone-800 text-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
         {/* Логотип */}
         <Link href="/" className="flex items-center">
