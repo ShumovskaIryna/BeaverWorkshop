@@ -141,7 +141,7 @@ export default function ContactForm() {
                 <a href="https://viber.com/your_viber" target="_blank" rel="noopener noreferrer" aria-label="Viber">
                   <img src="/images/viber.png" alt="" className="h-8 w-8" />
                 </a>
-                <a href="https://instagram.com/your_instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/beaver_workshop.l.v/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <img src="/images/instagram.png" alt="" className="h-8 w-8" />
                 </a>
               </div>

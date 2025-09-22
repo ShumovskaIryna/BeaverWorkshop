@@ -13,8 +13,6 @@ export default function HomePage() {
     <main className="min-h-screen flex flex-col items-center">
     <Header/>
     <Hero/>
-        {/* Beaver */} 
-         <Character/>
         {/* Послуги */}
         <ServicesSection/>
         {/* Що виготовляємо */}
