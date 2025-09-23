@@ -30,10 +30,10 @@ export default function Hero() {
           src="/images/Beaver.png"
           alt="Персонаж"
           className="
-            absolute z-30
+            absolute
             bottom-34 right-24
             w-[56vw] h-auto
-            z-50 animate-character transition-transform duration-500 ease-in-out
+            animate-character transition-transform duration-500 ease-in-out
           "
         />
       </div>
