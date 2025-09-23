@@ -42,7 +42,7 @@ const services = [
 export default function ServicesSection() {
   return (
     <section className="-mt-8">
-      <div className="text-center mb-0 mt-[-80px] lg:mb-15 lg:mt-5">
+      <div className="text-center lg:mb-15 lg:mt-5">
         <h2 className="text-black px-0 py-0 rounded tracking-wider text-[clamp(20px,5vw,28px)] font-semibold">
           ПОСЛУГИ
         </h2>
