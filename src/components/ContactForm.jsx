@@ -124,21 +124,21 @@ export default function ContactForm() {
             <div className="mt-3 space-y-2 text-[clamp(15px,4.5vw,17px)] text-gray-700">
               <p>
                 Телефон:{" "}
-                <a href="tel:+380501234567" className="underline hover:no-underline">
-                  +38 (050) 123-45-67
+                <a href="tel:+380955947843" className="underline hover:no-underline">
+                  +38095 594 78 43
                 </a>
               </p>
               <p>
                 Пошта:{" "}
                 <a href="mailto:example@email.com" className="underline hover:no-underline">
-                  example@email.com
+                  @egmail.com
                 </a>
               </p>
               <div className="flex justify-center gap-5 pt-3">
-                <a href="https://t.me/your_telegram" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                <a href="https://t.me/+380955947843" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
                   <img src="/images/telegram.png" alt="" className="h-8 w-8" />
                 </a>
-                <a href="https://viber.com/your_viber" target="_blank" rel="noopener noreferrer" aria-label="Viber">
+                <a href="https://viber.com" target="_blank" rel="noopener noreferrer" aria-label="Viber">
                   <img src="/images/viber.png" alt="" className="h-8 w-8" />
                 </a>
                 <a href="https://www.instagram.com/beaver_workshop.l.v/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

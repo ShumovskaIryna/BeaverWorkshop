@@ -55,7 +55,7 @@ export default function Footer() {
         {/* Контакти */}
             <div className="text-white/90">
               <ul className="space-y-3 text-[clamp(14px,4.2vw,16px)] tracking-wide">
-                <li><p>📞 +380 67 123 45 67</p></li>
+                <li><p>📞 +38095 594 78 43</p></li>
                  <li> <p>✉️ beaver@gmail.com</p></li>
                 <li><p>📍 Іванків, Україна</p></li>
                 <li><p>🕒 Пн–Пт: 9:00–18:00</p></li>
@@ -81,7 +81,7 @@ export default function Footer() {
                   <Image src="/images/instagram.png" alt="" width={32} height={32} />
                 </a>
                 <a
-                  href="https://t.me/your_telegram"
+                  href="https://t.me/+380955947843"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Telegram"
