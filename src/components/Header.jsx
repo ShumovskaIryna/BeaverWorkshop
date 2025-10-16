@@ -39,7 +39,7 @@ export default function Header() {
         {/* Телефон (desktop only) */}
         <div className="hidden md:block">
           <Link href="/contact" className="hover:text-brand-accent">
-            +380676617881
+            +38095 594 78 43
           </Link>
         </div>
 
@@ -100,7 +100,7 @@ export default function Header() {
             </li>
             <li>
               <Link href="/contact" onClick={() => setOpen(false)}>
-                +380676617881
+                +38095 594 78 43
               </Link>
             </li>
           </ul>
