@@ -116,7 +116,7 @@ export default function ContactForm() {
         {/* Карта */}
           <div
             className="mb-6 w-full h-[180px] sm:h-[220px] md:h-[260px] rounded-md bg-contain bg-no-repeat bg-center"
-            style={{ backgroundImage: "url('/images/ukraine.png')" }}
+            style={{ backgroundImage: "url('/images/Ukraine2.png')" }}
             aria-label="Карта України"
           />
           <div className="text-center">
@@ -130,8 +130,8 @@ export default function ContactForm() {
               </p>
               <p>
                 Пошта:{" "}
-                <a href="mailto:example@email.com" className="underline hover:no-underline">
-                  @egmail.com
+                <a href="mailto:Waldorf.vlasova@gmail.com" className="underline hover:no-underline">
+                  	Waldorf.vlasova@gmail.com
                 </a>
               </p>
               <div className="flex justify-center gap-5 pt-3">

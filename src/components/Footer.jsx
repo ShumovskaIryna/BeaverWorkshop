@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="w-full py-10">
       <div
         className="
-          mx-auto w-[90vw] md:w-[80vw]
+          mx-auto w-[100vw] md:w-[90vw]
           relative rounded-3xl overflow-hidden
           "
         style={{
@@ -56,8 +56,8 @@ export default function Footer() {
             <div className="text-white/90">
               <ul className="space-y-3 text-[clamp(14px,4.2vw,16px)] tracking-wide">
                 <li><p>📞 +38095 594 78 43</p></li>
-                 <li> <p>✉️ beaver@gmail.com</p></li>
-                <li><p>📍 Іванків, Україна</p></li>
+                 <li> <p>✉️ Waldorf.vlasova@gmail.com</p></li>
+                <li><p>📍 Бориспіль, Україна</p></li>
                 <li><p>🕒 Пн–Пт: 9:00–18:00</p></li>
               </ul>     
             </div>
