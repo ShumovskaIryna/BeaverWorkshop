@@ -13,7 +13,11 @@ export default function Portfolio() {
 
   // lightbox
   const [isOpen, setIsOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0); // глобальний індекс у filtered
+
+  // pagination
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(16); // 8 (xs), 9 (md), 12 (lg)
 
   useEffect(() => {
     (async () => {
@@ -34,8 +38,17 @@ export default function Portfolio() {
   const filtered =
     filter === "Всі" ? images : images.filter((i) => i.category === filter);
 
-  const openLightbox = (idx) => {
-    setActiveIndex(idx);
+  // скидаємо сторінку при зміні фільтра або pageSize
+  useEffect(() => {
+    setPage(1);
+  }, [filter, pageSize]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+  const startIndex = (page - 1) * pageSize;
+  const pageItems = filtered.slice(startIndex, startIndex + pageSize);
+
+  const openLightbox = (idxOnPage) => {
+    setActiveIndex(startIndex + idxOnPage);
     setIsOpen(true);
   };
   const closeLightbox = () => setIsOpen(false);
@@ -59,7 +72,6 @@ export default function Portfolio() {
       if (e.key === "ArrowLeft") prev();
     };
     window.addEventListener("keydown", onKey);
-    // блок скролу під модалкою
     const original = document.documentElement.style.overflow;
     document.documentElement.style.overflow = "hidden";
     return () => {
@@ -67,6 +79,30 @@ export default function Portfolio() {
       document.documentElement.style.overflow = original;
     };
   }, [isOpen, next, prev]);
+
+  // хелпери пагінації
+  const goTo = (p) => setPage(Math.min(Math.max(1, p), totalPages));
+  const prevPage = () => goTo(page - 1);
+  const nextPage = () => goTo(page + 1);
+
+  // будуємо короткий список сторінок: 1 ... cur-1 cur cur+1 ... last
+  const visiblePages = (() => {
+    const pages = [];
+    const push = (x) => pages.push(x);
+    if (totalPages <= 7) {
+      for (let i = 1; i <= totalPages; i++) push(i);
+    } else {
+      const first = 1, last = totalPages;
+      const left = Math.max(2, page - 1);
+      const right = Math.min(totalPages - 1, page + 1);
+      push(first);
+      if (left > 2) push("…");
+      for (let i = left; i <= right; i++) push(i);
+      if (right < totalPages - 1) push("…");
+      push(last);
+    }
+    return pages;
+  })();
 
   return (
     <main className="min-h-screen flex flex-col items-center">
@@ -88,10 +124,9 @@ export default function Portfolio() {
                   key={cat}
                   onClick={() => setFilter(cat)}
                   className={`whitespace-nowrap rounded-full px-4 py-2 text-[clamp(14px,4.5vw,16px)] transition
-                    ${
-                      active
-                        ? "bg-brand-accent text-white"
-                        : "bg-white text-brand-dark border border-black/10 hover:bg-black/5"
+                    ${active
+                      ? "bg-brand-accent text-white"
+                      : "bg-white text-brand-dark border border-black/10 hover:bg-black/5"
                     }`}
                 >
                   {cat}
@@ -109,7 +144,7 @@ export default function Portfolio() {
 
           {/* Сітка карток */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-            {filtered.map((img, i) => (
+            {pageItems.map((img, i) => (
               <button
                 key={`${img.src}-${i}`}
                 onClick={() => openLightbox(i)}
@@ -126,6 +161,52 @@ export default function Portfolio() {
               </button>
             ))}
           </div>
+
+          {/* Пагінація */}
+          {totalPages > 1 && (
+            <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3">
+              <button
+                onClick={prevPage}
+                disabled={page === 1}
+                className={`rounded-full px-3 sm:px-4 py-2 border text-sm sm:text-base
+                  ${page === 1 ? "opacity-40 cursor-not-allowed" : "hover:bg-black/5"}
+                `}
+                aria-label="Попередня сторінка"
+              >
+                ‹
+              </button>
+
+              {visiblePages.map((p, idx) =>
+                p === "…" ? (
+                  <span key={`dots-${idx}`} className="px-2 text-gray-500">…</span>
+                ) : (
+                  <button
+                    key={p}
+                    onClick={() => goTo(p)}
+                    className={`rounded-full px-3 sm:px-4 py-2 text-sm sm:text-base
+                      ${p === page
+                        ? "bg-brand-accent text-white"
+                        : "bg-white text-brand-dark border border-black/10 hover:bg-black/5"
+                      }`}
+                    aria-current={p === page ? "page" : undefined}
+                  >
+                    {p}
+                  </button>
+                )
+              )}
+
+              <button
+                onClick={nextPage}
+                disabled={page === totalPages}
+                className={`rounded-full px-3 sm:px-4 py-2 border text-sm sm:text-base
+                  ${page === totalPages ? "opacity-40 cursor-not-allowed" : "hover:bg-black/5"}
+                `}
+                aria-label="Наступна сторінка"
+              >
+                ›
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
