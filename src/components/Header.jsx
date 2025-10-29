@@ -7,21 +7,25 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-stone-800 text-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
+    <header className="sticky top-0 z-50 w-full bg-[var(--foreground)] text-white">
+      <div className="mx-auto flex max-w-8xl items-center justify-between px-4 py-3 md:px-8">
         {/* Логотип */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/Logo.png"
-            alt="Logo"
-            width={120}
-            height={60}
-            priority
-          />
+              src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/Logo.png"
+              alt="Logo"
+              width={500}
+              height={250}
+              priority
+              className="
+                w-[40vw] max-w-[200px] min-w-[120px]
+                h-auto
+              "
+            />
         </Link>
 
         {/* Навігація desktop */}
-        <nav className="hidden md:flex gap-8 text-base font-medium tracking-wide">
+        <nav className="hidden md:flex gap-8 text-bold tracking-wide text-[clamp(16px,4vw,20px)]">
           <Link href="/" className="hover:text-brand-accent">
             Головна
           </Link>
@@ -38,8 +42,22 @@ export default function Header() {
 
         {/* Телефон (desktop only) */}
         <div className="hidden md:block">
-          <Link href="/contact" className="hover:text-brand-accent">
-            +38095 594 78 43
+          <Link
+            href="https://t.me/+380955947843"
+            className="
+              relative inline-block px-10 py-4 mt-2 rounded-full
+              text-[clamp(16px,4vw,20px)] font-semibold tracking-wide
+              text-white transition-all duration-300
+              border border-black
+              bg-gradient-to-b from-[#44895D] to-[#004017]
+              shadow-inner
+              before:absolute before:inset-0 before:rounded-full
+              before:shadow-[inset_0_3px_3px_rgba(255,255,255,0.7),inset_0_-3px_3px_rgba(0,0,0,0.7)]
+              before:pointer-events-none
+              hover:brightness-110 hover:scale-[1.05]
+            "
+          >
+            Зв’язатися
           </Link>
         </div>
 
@@ -51,7 +69,7 @@ export default function Header() {
         >
           {/* Іконка бургер / close */}
           <svg
-            className="h-6 w-6"
+            className="h-10 w-10"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -76,8 +94,8 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="md:hidden border-t border-stone-700 bg-stone-800 px-4 py-3">
-          <ul className="flex flex-col gap-4 text-base">
+        <nav className="md:hidden bg-[var(--foreground)] px-8 py-3">
+          <ul className="flex flex-col gap-4 text-bold tracking-wide text-[clamp(18px,5vw,22px)]">
             <li>
               <Link href="/" onClick={() => setOpen(false)}>
                 Головна
@@ -99,8 +117,21 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/contact" onClick={() => setOpen(false)}>
-                +38095 594 78 43
+               <Link
+                href="https://t.me/+380955947843"
+                  className="
+                  relative flex justify-center px-10 py-4 mt-2 rounded-full
+                  text-[clamp(16px,4vw,20px)] font-semibold tracking-wide
+                  text-white transition-all duration-300
+                  border border-black
+                  bg-gradient-to-b from-[#44895D] to-[#004017]
+                  shadow-inner
+                  before:absolute before:inset-0 before:rounded-full
+                  before:shadow-[inset_0_3px_3px_rgba(255,255,255,0.7),inset_0_-3px_3px_rgba(0,0,0,0.7)]
+                  before:pointer-events-none
+                  hover:brightness-110 hover:scale-[1.05]
+                ">
+                Зв'язатися
               </Link>
             </li>
           </ul>

@@ -74,7 +74,7 @@ export default function Portfolio() {
 
       <section className="w-full py-8">
         <div className="mx-auto w-[90vw] md:w-[80vw]">
-          <h2 className="text-center text-black tracking-wider text-[clamp(22px,5vw,32px)] font-semibold mb-4">
+          <h2 className="text-center text-black tracking-wider text-[clamp(32px,8vw,36px)] font-semibold mb-4">
             ПОРТФОЛІО
           </h2>
           <BeaverMin />

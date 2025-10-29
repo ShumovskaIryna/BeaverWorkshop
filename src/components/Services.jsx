@@ -5,36 +5,36 @@ const services = [
     id: '01',
     title: 'КОНСУЛЬТАЦІЯ + ПРОРАХУНОК',
     description:
-      'Ми пропонуємо індивідуальний підхід до кожного проекту. Наша спеціалізація -  створення вражаючих та функціональних рішень як для комерційних, так і для житлових будівель. Наші професійні дизайнери забезпечать вам естетично задоволення та практичну використовуваність кожного, зробленого нами, елементу інтер’єру.',
+      'Безкоштовна консультація та точний прорахунок вартості вашого проєкту. Допоможемо підібрати оптимальні матеріали, дизайн і рішення під ваш бюджет.',
     buttonText: 'Розрахувати вартість',
-    image: '/images/s1.png',
-    link: '/contact',
+    image: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/1b.png',
+    link: 'https://t.me/+380955947843',
   },
   {
     id: '02',
     title: 'ПІДБІР МАТЕРІАЛІВ ТА ФУРНІТУРИ',
     description:
-      "Об'єднанням наших фахівців із вибору матеріалів і предметів інтер`єру забезпечується ефективне та економічне рішення для клієнта. Ми допомагаємо вибрати стильні та практичні елементи, що гармонійно доповнять ваш будинок без порушення загального вигляду. Лише з якісні та екологічно чисті матеріали.",
+      'Добираємо якісні дерев’яні матеріали та фурнітуру для дверей, сходів і меблів. Пропонуємо екологічні рішення, що поєднують стиль і довговічність.',
     buttonText: 'Дізнатися більше',
-    image: '/images/s2.png',
+    image: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/2b.png',
     link: '#materials',
   },
   {
     id: '03',
     title: 'ВЛАСНЕ ВИРОБНИЦТВО',
     description:
-      'Ми самостійно виготовляємо кожний елемент інтер’єру, Кожен етап обробки є індивідуальний та унікальний, різьблення, обробка, фарбування, лакування за вашими дизайнами та побажаннями.',
+      'Виготовляємо вироби з дерева на власному виробництві — від дверей і сходів до підвіконь та столів. Гарантуємо точність, якість і контроль кожного етапу.',
     buttonText: 'Дізнатися більше',
-    image: '/images/s3.png',
+    image: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/3b.png',
     link: '/about',
   },
   {
     id: '04',
     title: 'УСТАНОВКА ПІД КЛЮЧ',
     description:
-      'Наша послуга забезпечує повний контроль та виконання всіх етапів проекту з мінімальним втручанням з боку замовника.',
+      'Професійний монтаж дерев’яних конструкцій під ключ. Виконуємо встановлення швидко, акуратно і з повним контролем якості.',
     buttonText: 'Переглянути портфоліо',
-    image: '/images/s4.png',
+    image: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/4b.png',
     link: '/portfolio',
   },
 ];
@@ -43,7 +43,7 @@ export default function ServicesSection() {
   return (
     <section>
       <div className="text-center mb-0 mt-[-50px] lg:mb-15 lg:mt-5">
-        <h2 className="text-black px-0 py-0 rounded tracking-wider text-[clamp(20px,5vw,28px)] font-semibold">
+        <h2 className="text-black px-0 py-0 rounded tracking-wider text-[clamp(32px,8vw,36px)] font-semibold">
           ПОСЛУГИ
         </h2>
       </div>
@@ -52,42 +52,50 @@ export default function ServicesSection() {
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col lg:flex-row items-start justify-between gap-6"
+            className="flex flex-col lg:flex-row items-center justify-between gap-6"
           >
         {/* ID */}
-          <div className="lg:w-1/10 flex justify-center lg:justify-start">
+          <div className="lg:w-2/10 flex justify-center lg:justify-center mb-[-50px]">
             <div
-              className="font-bold text-[clamp(48px,12vw,80px)] text-[#4e3f3f]"
+              className="font-bold text-[clamp(52px,16vw,96px)] text-[#4e3f3f]"
               style={{
-                WebkitTextStroke: "2px #6b4b36"
+                WebkitTextStroke: "2px #3C2C20"
               }}
             >
               {service.id}
             </div>
           </div>
-
             {/* Text */}
             <div className="lg:w-6/10 space-y-3">
-              <h3 className="text-[clamp(16px,4.5vw,20px)] font-semibold uppercase text-[#2b2b2b]">
+              <h3 className="text-[clamp(24px,6vw,24px)] font-semibold uppercase">
+                <hr key={index} className="my-10 text-[#3C2C20]" />
                 {service.title}
               </h3>
-              <p className="text-[clamp(14px,4vw,16px)] leading-snug text-gray-700">
+              <p className="text-[clamp(18px,5vw,24px)] leading-snug">
                 {service.description}
               </p>
               <Link
                 href={service.link}
-                className="inline-block border text-[clamp(14px,3.8vw,15px)] border-black text-black px-5 py-2 mt-4 rounded-full hover:bg-black hover:text-white transition"
-              >
+                    className="relative flex justify-center px-10 py-4 mt-6 rounded-full
+                  text-[clamp(16px,4vw,20px)] font-semibold tracking-wide
+                  text-white transition-all duration-300
+                  border border-black
+                  bg-gradient-to-b from-[#44895D] to-[#004017]
+                  shadow-inner
+                  before:absolute before:inset-0 before:rounded-full
+                  before:shadow-[inset_0_3px_3px_rgba(255,255,255,0.7),inset_0_-3px_3px_rgba(0,0,0,0.7)]
+                  before:pointer-events-none
+                  hover:brightness-110 hover:scale-[1.05]">
                 {service.buttonText}
               </Link>
             </div>
 
             {/* Image */}
-            <div className="lg:w-6/10">
+            <div className="lg:w-3/10 flex justify-center">
               <img
                 src={service.image}
                 alt={service.title}
-                className="rounded-xl w-full h-auto object-cover shadow-lg"
+                className="rounded-xl w-auto h-80 object-cover"
               />
             </div>
           </div>

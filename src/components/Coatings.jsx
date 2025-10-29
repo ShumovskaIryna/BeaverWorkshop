@@ -7,28 +7,28 @@ export default function Coatings() {
       name: "ОЛІЯ-ВІСК",
       description:
         "Створює теплий, природний вигляд деревини та приємну на дотик поверхню",
-      imageSrc: "/images/oilwax.png",
+      imageSrc: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/oilwax.png",
     },
     {
       id: 2,
       name: "МІЦНИЙ ВІСК",
       description:
         "Створює додатковий захист від подряпин і вологи, додає блиску та гладкості.",
-      imageSrc: "/images/strongwax.png",
+      imageSrc: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/strongwax.png",
     },
     {
       id: 3,
       name: "ПОЛІУРЕТАНОВИЙ ЛАК",
       description:
         "Міцне прозоре покриття, що утворює захисну плівку та забезпечує довговічність.",
-      imageSrc: "/images/lacquer.png",
+      imageSrc: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/lacquer.png",
     },
     {
       id: 4,
       name: "2K ЕМАЛЬ",
       description:
         "Кольорове, стійке до зносу та вологи покриття, ідеальне для яскравих інтер'єрів.",
-      imageSrc: "/images/enamel.png",
+      imageSrc: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/enamel.png",
     },
   ];
 
@@ -36,13 +36,13 @@ export default function Coatings() {
     <section id="coatings" className="py-14 w-full relative">
       {/* Заголовок */}
       <div className="text-center mb-10">
-        <h2 className="text-black tracking-wider text-[clamp(22px,5vw,32px)] font-semibold">
+        <h2 className="tracking-wider text-[clamp(32px,8vw,36px)] font-semibold">
           ПОКРИТТЯ
         </h2>
       </div>
 
       {/* Сітка карток */}
-      <div className="mx-auto w-[90vw] md:w-[80vw] grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <div className="mx-auto w-[90vw] md:w-[80vw] grid grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-2">
         {coatings.map((coating) => (
           <div
             key={coating.id}
@@ -53,10 +53,10 @@ export default function Coatings() {
               alt={coating.name}
               className="w-[clamp(120px,28vw,180px)] h-auto object-contain mb-3 sm:mb-4"
             />
-            <h3 className="text-[clamp(16px,5vw,20px)] font-semibold text-[#2b2b2b] mb-2">
+            <h3 className="text-[clamp(16px,5vw,20px)] font-semibold mb-2">
               {coating.name}
             </h3>
-            <p className="text-[clamp(13px,4vw,15px)] text-gray-600 leading-snug">
+            <p className="text-[clamp(14px,4vw,18px)] leading-snug">
               {coating.description}
             </p>
           </div>

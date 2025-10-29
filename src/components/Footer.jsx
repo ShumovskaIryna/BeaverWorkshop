@@ -6,20 +6,15 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full py-10">
+    <footer className="w-full py-10 bg-[var(--foreground)]">
       <div
         className="
           mx-auto w-[100vw] md:w-[90vw]
           relative rounded-3xl overflow-hidden
           "
-        style={{
-          backgroundImage: "url('/images/footer.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
         {/* затемнення для контрасту тексту */}
-        <div className="absolute inset-0 bg-[#4b3d32]/85" />
+        <div className="absolute inset-0" />
 
         {/* контент */}
         <div className="relative z-10 px-6 sm:px-15 py-8">
@@ -29,7 +24,7 @@ export default function Footer() {
             <div className="space-y-4">
               <Link href="/" aria-label="На головну">
                 <Image
-                  src="/images/Logo.png"
+                  src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/Logo.png"
                   alt="Beaver Workshop"
                   width={180}
                   height={90}
@@ -78,7 +73,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Instagram"
                 >
-                  <Image src="/images/instagram.png" alt="" width={32} height={32} />
+                  <Image src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/instagram.png" alt="" width={32} height={32} />
                 </a>
                 <a
                   href="https://t.me/+380955947843"
@@ -86,7 +81,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Telegram"
                 >
-                  <Image src="/images/telegram.png" alt="" width={32} height={32} />
+                  <Image src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/telegram.png" alt="" width={32} height={32} />
                 </a>
               </div>
             </div>

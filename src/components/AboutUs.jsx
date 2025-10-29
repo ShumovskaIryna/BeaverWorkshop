@@ -4,7 +4,7 @@ export default function AboutUs() {
   return (
     <section id="about" className="w-full py-12">
       <div className="text-center mb-10">
-        <h2 className="text-black tracking-wider text-[clamp(22px,5vw,32px)] font-semibold">
+        <h2 className="text-black tracking-wider text-[clamp(32px,8vw,36px)] font-semibold">
           ПРО НАС
         </h2>
       </div>
@@ -13,15 +13,15 @@ export default function AboutUs() {
         {/* Left блок */}
         <div className="flex flex-col gap-6 md:gap-8">
           <div className="relative w-full h-[40vh] rounded-xl overflow-hidden">
-            <Image src="/images/stairs1.png" alt="Сходи" fill className="object-cover" />
+            <Image src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/stairs1.png" alt="Сходи" fill className="object-cover" />
           </div>
-          <h3 className="text-[clamp(24px,8vw,32px)] font-semibold">
+          <h3 className="text-[clamp(36px,10vw,40px)] font-bold">
             275{" "}
-            <span className="text-[clamp(14px,4vw,16px)] font-normal">
+            <span className="text-[clamp(20px,7vw,22px)] font-normal">
               реалізованих проєктів
             </span>
           </h3>
-          <p className="text-[clamp(14px,4vw,16px)] text-gray-700 leading-relaxed md:w-[30vw]">
+          <p className="text-[clamp(14px,4vw,16px)]leading-relaxed md:w-[30vw]">
             Наша колекція з більш ніж 275 реалізованих проектів є відображенням
             довіри власників великих комерційних об'єктів, а також господарів
             будинків і квартир. Ці проекти свідчать про нашу здатність створювати
@@ -31,15 +31,15 @@ export default function AboutUs() {
           </p>
 
           <div className="relative w-full h-[40vh] rounded-xl overflow-hidden">
-            <Image src="/images/stairs3.png" alt="Клієнти" fill className="object-cover" />
+            <Image src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/stairs3.png" alt="Клієнти" fill className="object-cover" />
           </div>
-          <h3 className="text-[clamp(24px,8vw,32px)] font-semibold">
+          <h3 className="text-[clamp(36px,10vw,40px)] font-bold">
             200+{" "}
-            <span className="text-[clamp(14px,4vw,16px)] font-normal">
+            <span className="text-[clamp(20px,7vw,22px)] font-normal">
               задоволених клієнтів
             </span>
           </h3>
-          <p className="text-[clamp(14px,4vw,16px)] text-gray-700 leading-relaxed md:w-[30vw]">
+          <p className="text-[clamp(14px,4vw,16px)] leading-relaxed md:w-[30vw]">
             Обслуговування клієнтів і дизайн подібні до мистецтва — обидва
             вимагають особливого таланту. Наша мета полягає в тому, щоб забезпечити
             нашим клієнтам найвищий рівень обслуговування. Ми завжди на зв'язку з
@@ -49,7 +49,7 @@ export default function AboutUs() {
 
         {/* Right блок */}
         <div className="flex flex-col gap-6 md:gap-8 md:mt-[5vw]">
-          <p className="text-[clamp(14px,4vw,16px)] text-gray-700 leading-relaxed mb-5 md:mx-[6vw] md:w-[28vw]">
+          <p className="text-[clamp(14px,4vw,16px)] leading-relaxed mb-5 md:mx-[6vw] md:w-[28vw]">
             У нас власне виробництво. Робота над проектом - це тісний зв'язок між
             дизайном інтер'єру, підбором якісного матеріалу, інженерним підходом та
             побажаннями замовника. Організовано чітку та відповідальну роботу.
@@ -58,15 +58,15 @@ export default function AboutUs() {
           </p>
 
           <div className="relative w-full h-[40vh] rounded-xl overflow-hidden">
-            <Image src="/images/stairs2.png" alt="Проєкти" fill className="object-cover" />
+            <Image src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/stairs2.png" alt="Проєкти" fill className="object-cover" />
           </div>
-          <h3 className="text-[clamp(24px,8vw,32px)] font-semibold mx-0 md:mx-[6vw]">
+          <h3 className="text-[clamp(36px,10vw,40px)] font-bold mx-0 md:mx-[6vw]">
             12{" "}
-            <span className="text-[clamp(14px,4vw,16px)] font-normal">
+            <span className="text-[clamp(20px,7vw,22px)] font-normal">
               років досвіду
             </span>
           </h3>
-          <p className="text-[clamp(14px,4vw,16px)] text-gray-700 leading-relaxed mb-5 mx-0 md:mx-[6vw] md:w-[29vw]">
+          <p className="text-[clamp(14px,4vw,16px)] leading-relaxed mb-5 mx-0 md:mx-[6vw] md:w-[29vw]">
             За 12 років нашої роботи ми здійснили безліч успішних проектів, які не
             лише прикрашають і задовольняють наших клієнтів, але й допомагають у їх
             повсякденному житті та бізнесі. Наш спектр послуг широкий: від створення
@@ -75,7 +75,7 @@ export default function AboutUs() {
           </p>
 
           <div className="relative w-full h-[40vh] rounded-xl overflow-hidden">
-            <Image src="/images/stairs4.png" alt="Досвід" fill className="object-cover" />
+            <Image src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/stairs4.png" alt="Досвід" fill className="object-cover" />
           </div>
         </div>
       </div>
