@@ -68,12 +68,12 @@ export default function Footer() {
               </button>
                <div className="flex items-center gap-4">
                 <a
-                  href="https://www.instagram.com/beaver_workshop.l.v/"
+                  href="viber://add?number=380955947843"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram"
+                  aria-label="Viber"
                 >
-                  <Image src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/instagram.png" alt="" width={32} height={32} />
+                  <Image src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/viber.png" alt="" width={36} height={38} />
                 </a>
                 <a
                   href="https://t.me/+380955947843"

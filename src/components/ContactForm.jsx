@@ -17,7 +17,7 @@ export default function ContactForm() {
       </div>
       <div className="mx-auto w-[90vw] md:w-[80vw] grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
           <img
-            src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/bob.png"
+            src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/bob2.png"
             alt="Бобрик"
             className="w-auto h-90 object-cover"
           />
@@ -49,6 +49,18 @@ export default function ContactForm() {
             </p>
 
             <div className="flex justify-center md:justify-start gap-5 pt-3">
+                 <a
+                href="viber://add?number=380955947843"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Viber"
+              >
+                <img
+                  src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/viber.png"
+                  alt="Viber"
+                  className="h-9 w-9 hover:scale-105 transition"
+                />
+              </a>
               <a
                 href="https://t.me/+380955947843"
                 target="_blank"
@@ -58,18 +70,6 @@ export default function ContactForm() {
                 <img
                   src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/telegram.png"
                   alt="Telegram"
-                  className="h-9 w-9 hover:scale-105 transition"
-                />
-              </a>
-              <a
-                href="https://www.instagram.com/beaver_workshop.l.v/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <img
-                  src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/instagram.png"
-                  alt="Instagram"
                   className="h-9 w-9 hover:scale-105 transition"
                 />
               </a>

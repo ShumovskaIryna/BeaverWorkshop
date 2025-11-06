@@ -2,7 +2,7 @@ export default function Materials() {
   const materials = [
     {
       id: 1,
-      name: 'ЯСЕНЬ',
+      name: 'ЯСЕН',
       description: 'Твердий та довговічний матеріал з виразною текстурою.',
       imageSrc: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/ashh.png',
     },

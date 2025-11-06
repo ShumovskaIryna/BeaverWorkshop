@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Desktop Version */}
       <div className="relative hidden md:block md:w-[96vw] md:aspect-[16/7] overflow-hidden">
         <Image
-          src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/main+p.png"
+          src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/Main.webp"
           alt="Main Photo"
           fill
           className="object-cover md:object-center"
