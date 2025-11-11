@@ -10,7 +10,7 @@ export default function Hero() {
       {/* ФОНове зображення — desktop */}
       <div className="hidden md:block absolute inset-0">
         <Image
-          src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/stairs1.png"
+          src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/Hand.webp"
           alt="Деревʼяні сходи та двері з масиву — Beaver Workshop"
           fill
           priority
@@ -22,7 +22,7 @@ export default function Hero() {
       {/* ФОНове зображення — mobile */}
       <div className="block md:hidden absolute inset-0">
         <img
-          src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/stairs1.png"
+          src="https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/Hand.webp"
           alt="Деревʼяні сходи — мобільна версія"
           className="h-full w-full object-cover opacity-20"
           style={{ objectPosition: "80% center" }}
