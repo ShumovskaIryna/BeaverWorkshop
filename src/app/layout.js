@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="uk" className={raleway.variable}>
       <link rel="manifest" href="/site.webmanifest" />
+      <meta name="google-site-verification" content="7P7DMHmaU46yyNH9Weby-SDDnlvd0X3ZsNmZLX1l9SU" />
       <body className="font-raleway bg-white text-black">{children}</body>
     </html>
   );
