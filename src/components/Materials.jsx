@@ -1,68 +1,109 @@
+// app/components/Materials.tsx
 export default function Materials() {
   const materials = [
     {
       id: 1,
-      name: 'ЯСЕН',
-      description: 'Твердий та довговічний матеріал з виразною текстурою.',
-      imageSrc: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/ashh.png',
+      name: "ЯСЕН",
+      description: "Твердий та довговічний матеріал з виразною текстурою.",
+      imageSrc: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/ashh.png",
     },
     {
       id: 2,
-      name: 'ВІЛЬХА',
+      name: "ВІЛЬХА",
       description: "М'яке дерево з приємним червонуватим відтінком.",
-      imageSrc: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/ald.png',
+      imageSrc: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/ald.png",
     },
     {
       id: 3,
-      name: 'ДУБ',
-      description: 'Міцний, стійкий до зношування, з характерною текстурою.',
-      imageSrc: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/oakk.png',
+      name: "ДУБ",
+      description: "Міцний, стійкий до зношування, з характерною текстурою.",
+      imageSrc: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/oakk.png",
     },
     {
       id: 4,
-      name: 'ГОРІХ',
+      name: "ГОРІХ",
       description: "Має темний відтінок і гарно виглядає в інтер'єрі.",
-      imageSrc: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/nut.png',
+      imageSrc: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/nut.png",
     },
   ];
 
   return (
     <section
       id="materials"
-      className="relative py-14 w-full bg-cover bg-center"
-      style={{ backgroundImage: "url('https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/s2.png')" }}
+      className="relative py-10 md:py-10 w-full overflow-hidden"
     >
-     <div className="absolute inset-0 bg-[var(--background)]/80"></div>
-      <div className="relative z-10">
+      <div className="relative z-10 mx-auto w-[92vw] md:w-[86vw]">
         {/* Заголовок */}
-        <div className="text-center mb-10">
-          <h2 className="tracking-wider text-[clamp(32px,8vw,36px)] font-semibold">
+        <div className="text-center mb-10 md:mb-14">
+          <h2
+            className="font-black leading-[0.9]"
+            style={{
+              fontSize: "clamp(32px,8vw,80px)",
+              WebkitTextStroke: "2px #7a5231",
+              color: "transparent",
+            }}
+          >
             МАТЕРІАЛИ
           </h2>
-          <p className="mt-2 px-5 text-[clamp(18px,5vw,24px)]">
+          <div className="mx-auto mt-3 h-[6px] w-[160px] bg-gradient-to-r from-[#236a3b] to-[#0d331a]" />
+          <p className="mt-4 px-4 md:px-0 text-[clamp(16px,3.8vw,20px)] opacity-90">
             Ми працюємо з різними типами деревини для створення якісних виробів
           </p>
         </div>
 
-        {/* Сітка карток */}
-        <div className="mx-auto w-[90vw] md:w-[80vw] grid grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-2">
-          {materials.map((material) => (
-            <div
-              key={material.id}
-              className="flex flex-col items-center text-center p-2 sm:p-5"
+        {/* Сітка карток (hug-height) */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+          {materials.map((m) => (
+            <article
+              key={m.id}
+              className="
+                relative rounded-2xl
+                bg-white/10 backdrop-blur-[8px]
+                ring-1 ring-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.25)]
+                hover:bg-white/14 transition
+                p-4 sm:p-5 text-center
+                overflow-visible
+              "
             >
               <img
-                src={material.imageSrc}
-                alt={material.name}
-                className="w-[clamp(120px,28vw,180px)] h-auto object-contain mb-3 sm:mb-4"
+                src={m.imageSrc}
+                alt={m.name}
+                loading="lazy"
+                className="
+                  mx-auto mb-3 sm:mb-4 object-contain
+                  w-[clamp(120px,26vw,180px)] h-auto
+                "
               />
-              <h3 className="text-[clamp(16px,5vw,20px)] font-semibold mb-2">
-                {material.name}
+
+              <h3
+                className="inline-block uppercase font-extrabold leading-tight px-3 py-1 rounded-md"
+                style={{
+                  background: "linear-gradient(90deg, #E8DCCB 0%, #d9c8a9 100%)",
+                  fontSize: "clamp(16px,4.5vw,20px)",
+                  color: "#1c140e",
+                }}
+              >
+                {m.name}
               </h3>
-              <p className="text-[clamp(14px,4vw,18px)] leading-snug">
-                {material.description}
+
+              {/* ОПИС: дозволяємо повністю розкриватися */}
+              <p
+                className="
+                  mt-2 text-[clamp(13px,3.8vw,16px)]
+                  leading-snug md:leading-normal
+                  break-words hyphens-auto
+                "
+              >
+                {m.description}
               </p>
-            </div>
+
+              {/* нижня панель тепер у потоці (не absolute) */}
+              <div className="mt-4 h-[36px] flex items-center justify-center bg-white/2 backdrop-blur-[4px] rounded-md">
+                <span className="text-[10px] tracking-[0.25em] opacity-70">
+                  *Натуральне дерево
+                </span>
+              </div>
+            </article>
           ))}
         </div>
       </div>

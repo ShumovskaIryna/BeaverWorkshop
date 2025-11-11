@@ -1,104 +1,165 @@
 import Link from "next/link";
 
+const ACCENT = {
+  beigeGrad: "linear-gradient(90deg, rgb(255,239,216) 0%, rgb(167,149,115) 100%)",
+  woodStripe: "linear-gradient(90deg, #5a3c22, #7a5231 45%, #5a3c22 100%)",
+  grad: "linear-gradient(90deg, #236a3b 0%, #0d331a 100%)",
+};
+
 const services = [
   {
-    id: '01',
-    title: 'КОНСУЛЬТАЦІЯ + ПРОРАХУНОК',
+    id: "01",
+    title: "КОНСУЛЬТАЦІЯ + ПРОРАХУНОК",
     description:
-      'Безкоштовна консультація та точний прорахунок вартості вашого проєкту. Допоможемо підібрати оптимальні матеріали, дизайн і рішення під ваш бюджет.',
-    buttonText: 'Розрахувати вартість',
-    image: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/1b.png',
-    link: 'https://t.me/+380955947843',
+      "Безкоштовна консультація та детальний прорахунок: двері, сходи, столи, підвіконня з масиву — підберемо матеріал, конструктив і бюджет оптимально.",
+    buttonText: "Розрахувати вартість",
+    image: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/1b.png",
+    link: "https://t.me/+380955947843",
   },
   {
-    id: '02',
-    title: 'ПІДБІР МАТЕРІАЛІВ ТА ФУРНІТУРИ',
+    id: "02",
+    title: "ПІДБІР МАТЕРІАЛІВ ТА ФУРНІТУРИ",
     description:
-      'Добираємо якісні дерев’яні матеріали та фурнітуру для дверей, сходів і меблів. Пропонуємо екологічні рішення, що поєднують стиль і довговічність.',
-    buttonText: 'Дізнатися більше',
-    image: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/2b.png',
-    link: '#materials',
+      "Допоможемо обрати дерево, фурнітуру, покриття та конструктиви відповідно до технічних вимог та дизайну інтер'єру.",
+    buttonText: "Дізнатися більше",
+    image: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/2b.png",
+    link: "#materials",
   },
   {
-    id: '03',
-    title: 'ВЛАСНЕ ВИРОБНИЦТВО',
+    id: "03",
+    title: "ВИРОБНИЦТВО",
     description:
-      'Виготовляємо вироби з дерева на власному виробництві — від дверей і сходів до підвіконь та столів. Гарантуємо точність, якість і контроль кожного етапу.',
-    buttonText: 'Дізнатися більше',
-    image: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/3b.png',
-    link: '/about',
+      "Виготовляємо двері, сходи, меблі та інші вироби з дуба, ясена, горіха та вільхи. Повний цикл виробництва.",
+    buttonText: "Дізнатися більше",
+    image: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/3b.png",
+    link: "/about",
   },
   {
-    id: '04',
-    title: 'УСТАНОВКА ПІД КЛЮЧ',
+    id: "04",
+    title: "МОНТАЖ ПІД КЛЮЧ",
     description:
-      'Професійний монтаж дерев’яних конструкцій під ключ. Виконуємо встановлення швидко, акуратно і з повним контролем якості.',
-    buttonText: 'Переглянути портфоліо',
-    image: 'https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/4b.png',
-    link: '/portfolio',
+      "Професійне встановлення дверей, сходів та меблів. Гарантія, акуратність, точність і відповідність вашому проєкту.",
+    buttonText: "Переглянути портфоліо",
+    image: "https://beaverworkshop.s3.eu-west-3.amazonaws.com/Images/4b.png",
+    link: "/portfolio",
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section>
-      <div className="text-center mb-0 mt-[-50px] lg:mb-15 lg:mt-5">
-        <h2 className="text-black px-0 py-0 rounded tracking-wider text-[clamp(32px,8vw,36px)] font-semibold">
+    <section className="relative py-20 md:py-24">
+
+      {/* заголовок по центру */}
+      <div className="relative mx-auto w-[92vw] md:w-[86vw] text-center">
+        <h2
+          className="font-black leading-[0.9]"
+          style={{
+            fontSize: "clamp(34px,10vw,90px)",
+            WebkitTextStroke: "2px #7a5231",
+            color: "transparent",
+          }}
+        >
           ПОСЛУГИ
         </h2>
+        <div
+          className="mt-3 h-[6px] w-[160px] mx-auto"
+          style={{ background: ACCENT.grad }}
+        />
       </div>
 
-      <div className="w-[90vw] md:w-[80vw] mx-auto space-y-10">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="flex flex-col lg:flex-row items-center justify-between gap-6"
+      {/* сітка */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mx-auto w-[92vw] md:w-[86vw]">
+
+        {services.map((s) => (
+          <article
+            key={s.id}
+            className="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-[8px]
+                       ring-1 ring-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.25)]
+                       hover:bg-white/14 transition flex flex-col"
           >
-        {/* ID */}
-          <div className="lg:w-2/10 flex justify-center lg:justify-center mb-[-50px]">
+            {/* верхній деревʼяний штрих */}
             <div
-              className="font-bold text-[clamp(52px,16vw,96px)] text-[#4e3f3f]"
+              className="absolute inset-x-6 top-0 h-[6px] rounded-b"
               style={{
-                WebkitTextStroke: "2px #3C2C20"
+                background: ACCENT.woodStripe,
+                opacity: 0.55,
               }}
-            >
-              {service.id}
-            </div>
-          </div>
-            {/* Text */}
-            <div className="lg:w-6/10 space-y-3">
-              <h3 className="text-[clamp(24px,6vw,24px)] font-semibold uppercase">
-                <hr key={index} className="my-10 text-[#3C2C20]" />
-                {service.title}
-              </h3>
-              <p className="text-[clamp(18px,5vw,24px)] leading-snug">
-                {service.description}
-              </p>
-              <Link
-                href={service.link}
-                    className="relative flex justify-center px-10 py-4 mt-6 rounded-full
-                  text-[clamp(16px,4vw,20px)] font-semibold tracking-wide
-                  text-white transition-all duration-300
-                  border border-black
-                  bg-gradient-to-b from-[#44895D] to-[#004017]
-                  shadow-inner
-                  before:absolute before:inset-0 before:rounded-full
-                  before:shadow-[inset_0_3px_3px_rgba(255,255,255,0.7),inset_0_-3px_3px_rgba(0,0,0,0.7)]
-                  before:pointer-events-none
-                  hover:brightness-110 hover:scale-[1.05]">
-                {service.buttonText}
-              </Link>
+            />
+
+            {/* контент */}
+            <div className="flex flex-col md:flex-row gap-5 p-6 md:p-8 relative">
+
+              {/* зображення */}
+              <div className="relative w-full md:w-[42%]">
+                <div className="absolute inset-0 z-[1] bg-gradient-to-br from-black/35 via-black/20 to-transparent rounded-xl" />
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="relative z-[2] w-full h-[220px] md:h-full object-contain p-2 opacity-90"
+                />
+
+                {/* ID ПОЗАДУ ТА ВГОРІ */}
+                <span
+                  className="absolute right-3 top-2 font-black select-none z-0 pointer-events-none"
+                  style={{
+                    WebkitTextStroke: "2.2px #000",
+                    color: "#E8DCCB",
+                    fontSize: "clamp(70px,10vw,140px)",
+                    lineHeight: 1,
+                    opacity: 0.85,
+                    textShadow: "0 6px 26px rgba(0,0,0,0.35)",
+                  }}
+                >
+                  {s.id}
+                </span>
+              </div>
+
+              {/* текст */}
+              <div className="flex flex-col md:w-[58%]">
+                <h3
+                  className="uppercase font-extrabold max-w-max px-3 py-1 rounded-md"
+                  style={{
+                    background: ACCENT.beigeGrad,
+                    fontSize: "clamp(16px,4.5vw,20px)",
+                    color: "#1c140e",
+                  }}
+                >
+                  {s.title}
+                </h3>
+
+                <p className="mt-3 text-[clamp(13px,3.8vw,16px)] leading-snug">
+                  {s.description}
+                </p>
+
+                <div className="mt-5 flex items-center gap-4">
+                  <Link
+                    href={s.link}
+                    className="inline-flex items-center justify-center px-6 py-3 rounded-full text-[13px] font-semibold uppercase tracking-wide text-white
+                               bg-[linear-gradient(135deg,#2fa657_0%,#236a3b_45%,#0d331a_100%)]
+                               shadow-[inset_0_3px_10px_rgba(255,255,255,0.25),0_10px_28px_rgba(0,0,0,0.25)]
+                               hover:scale-[1.04] active:scale-[0.99] transition"
+                  >
+                    {s.buttonText}
+                  </Link>
+
+                  <span className="text-[10px] uppercase tracking-widest text-white/70">
+                    {s.id} / 04
+                  </span>
+                </div>
+              </div>
             </div>
 
-            {/* Image */}
-            <div className="lg:w-3/10 flex justify-center">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="rounded-xl w-auto h-80 object-cover"
+            {/* нижній скляний рядок */}
+            <div className="mt-auto px-5 py-3 md:px-6 md:py-3.5 bg-white/8 backdrop-blur-[4px] flex items-center justify-between">
+              <span className="text-[10px] uppercase tracking-[0.2em] opacity-80">
+                stairs • doors • tables • sells
+              </span>
+              <span
+                className="h-[8px] w-[90px] sm:w-[110px] md:w-[120px] rounded"
+                style={{ background: ACCENT.grad }}
               />
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
