@@ -10,11 +10,29 @@ const raleway = Raleway({
 export const metadata = {
   title: 'Beaver Workshop',
   description: 'Сайт з обробки дерева',
+icons: {
+    icon: "/favicon.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "uk_UA",
+    url: "https://www.beaverworkshop.com.ua",
+    siteName: "Beaver Workshop",
+    images: [
+      {
+        url: "/favicon.png",
+        width: 512,
+        height: 512,
+        alt: "Beaver Workshop Logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="uk" className={raleway.variable}>
+      <link rel="manifest" href="/site.webmanifest" />
       <body className="font-raleway bg-white text-black">{children}</body>
     </html>
   );
