@@ -13,8 +13,8 @@ export default function BeaverMin() {
           className={`fixed bottom-5 right-4 sm:right-10 lg:right-[120px] z-50 scale-character`}
         >
           <img
-            src="/images/Beaver.png"
-            alt="Персонаж"
+            src="/Beaver.png"
+            alt="Бобер"
             className="w-[30vw] sm:w-[60vw] md:w-[30vw] h-auto"
           />
         </div>
