@@ -28,7 +28,7 @@ export default function Character() {
       `}
     >
       <img
-        src="/images/Beaver.png"
+        src="/images/BeaverM.png"
         alt="Персонаж"
     className="w-[46vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] h-auto"
       />
