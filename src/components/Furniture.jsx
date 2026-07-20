@@ -1,10 +1,10 @@
 const products = [
-  { title: "Сходи", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/icons/1.png" },
-  { title: "Рейки", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/icons/2.png" },
-  { title: "Двері", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/icons/3.png" },
-  { title: "Столи", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/icons/5.png" },
-  { title: "Ліжка", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/icons/4.png" },
-  { title: "Тумби", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/icons/6.png" },
+  { title: "Сходи", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/images/icons/1.png" },
+  { title: "Рейки", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/images/icons/2.png" },
+  { title: "Двері", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/images/icons/3.png" },
+  { title: "Столи", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/images/icons/5.png" },
+  { title: "Ліжка", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/images/icons/4.png" },
+  { title: "Тумби", icon: "https://beaver-workshop-gallery.s3.amazonaws.com/images/icons/6.png" },
 ];
 
 const ACCENT = {

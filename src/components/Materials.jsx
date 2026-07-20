@@ -5,25 +5,25 @@ export default function Materials() {
       id: 1,
       name: "ЯСЕН",
       description: "Твердий та довговічний матеріал з виразною текстурою.",
-      imageSrc: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/ashh.png",
+      imageSrc: "https://beaver-workshop-gallery.s3.amazonaws.com/images/ashh.png",
     },
     {
       id: 2,
       name: "ВІЛЬХА",
       description: "М'яке дерево з приємним червонуватим відтінком.",
-      imageSrc: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/ald.png",
+      imageSrc: "https://beaver-workshop-gallery.s3.amazonaws.com/images/ald.png",
     },
     {
       id: 3,
       name: "ДУБ",
       description: "Міцний, стійкий до зношування, з характерною текстурою.",
-      imageSrc: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/oakk.png",
+      imageSrc: "https://beaver-workshop-gallery.s3.amazonaws.com/images/oakk.png",
     },
     {
       id: 4,
       name: "ГОРІХ",
       description: "Має темний відтінок і гарно виглядає в інтер'єрі.",
-      imageSrc: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/nut.png",
+      imageSrc: "https://beaver-workshop-gallery.s3.amazonaws.com/images/nut.png",
     },
   ];
 

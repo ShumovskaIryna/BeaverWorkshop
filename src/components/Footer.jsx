@@ -41,7 +41,7 @@ export default function Footer() {
               <div className="space-y-4">
                 <Link href="/" aria-label="На головну" className="inline-block">
                   <Image
-                    src="https://beaver-workshop-gallery.s3.amazonaws.com/Images/Logo.png"
+                    src="https://beaver-workshop-gallery.s3.amazonaws.com/images/Logo.png"
                     alt="Beaver Workshop — виготовлення з дерева"
                     width={200}
                     height={96}
@@ -145,7 +145,7 @@ export default function Footer() {
                     title="Відкрити Viber"
                   >
                     <Image
-                      src="https://beaver-workshop-gallery.s3.amazonaws.com/Images/viber.png"
+                      src="https://beaver-workshop-gallery.s3.amazonaws.com/images/viber.png"
                       alt="Viber"
                       width={28}
                       height={28}
@@ -160,7 +160,7 @@ export default function Footer() {
                     title="Відкрити Telegram"
                   >
                     <Image
-                      src="https://beaver-workshop-gallery.s3.amazonaws.com/Images/telegram.png"
+                      src="https://beaver-workshop-gallery.s3.amazonaws.com/images/telegram.png"
                       alt="Telegram"
                       width={26}
                       height={26}
