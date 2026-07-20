@@ -13,7 +13,7 @@ const services = [
     description:
       "Безкоштовна консультація та детальний прорахунок: двері, сходи, столи, підвіконня з масиву — підберемо матеріал, конструктив і бюджет оптимально.",
     buttonText: "Розрахувати вартість",
-    image: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/1b.png",
+    image: "https://beaver-workshop-gallery.s3.amazonaws.com/images/1b.png",
     link: "https://t.me/+380955947843",
   },
   {
@@ -22,7 +22,7 @@ const services = [
     description:
       "Допоможемо обрати дерево, фурнітуру, покриття та конструктиви відповідно до технічних вимог та дизайну інтер'єру.",
     buttonText: "Дізнатися більше",
-    image: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/2b.png",
+    image: "https://beaver-workshop-gallery.s3.amazonaws.com/images/2b.png",
     link: "#materials",
   },
   {
@@ -31,7 +31,7 @@ const services = [
     description:
       "Виготовляємо двері, сходи, меблі та інші вироби з дуба, ясена, горіха та вільхи. Повний цикл виробництва.",
     buttonText: "Дізнатися більше",
-    image: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/3b.png",
+    image: "https://beaver-workshop-gallery.s3.amazonaws.com/images/3b.png",
     link: "/about",
   },
   {
@@ -40,7 +40,7 @@ const services = [
     description:
       "Професійне встановлення дверей, сходів та меблів. Гарантія, акуратність, точність і відповідність вашому проєкту.",
     buttonText: "Переглянути портфоліо",
-    image: "https://beaver-workshop-gallery.s3.amazonaws.com/Images/4b.png",
+    image: "https://beaver-workshop-gallery.s3.amazonaws.com/images/4b.png",
     link: "/portfolio",
   },
 ];

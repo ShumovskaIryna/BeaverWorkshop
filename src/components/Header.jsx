@@ -32,7 +32,7 @@ export default function Header() {
           {/* Лого */}
           <Link href="/" className="flex items-center">
             <Image
-              src="https://beaver-workshop-gallery.s3.amazonaws.com/Images/Logo.png"
+              src="https://beaver-workshop-gallery.s3.amazonaws.com/images/Logo.png"
               alt="Beaver Workshop Logo"
               width={500}
               height={250}
@@ -120,7 +120,7 @@ export default function Header() {
               <div className="flex items-center justify-between">
                 <Link href="/" className="flex items-center">
                   <Image
-                    src="https://beaver-workshop-gallery.s3.amazonaws.com/Images/Logo.png"
+                    src="https://beaver-workshop-gallery.s3.amazonaws.com/images/Logo.png"
                     alt="Beaver Workshop Logo"
                     width={260}
                     height={120}

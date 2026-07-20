@@ -28,7 +28,7 @@ export default function Character() {
       `}
     >
       <img
-        src="https://beaver-workshop.s3.us-east-1.amazonaws.com/Images/BeaverM.png"
+        src="https://beaver-workshop.s3.us-east-1.amazonaws.com/images/BeaverM.png"
         alt="Бобер"
     className="w-[46vw] sm:w-[40vw] md:w-[30vw] lg:w-[30vw] h-auto"
       />

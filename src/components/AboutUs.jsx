@@ -40,7 +40,7 @@ export default function AboutUs() {
           {/* Фото 1 */}
           <div className="relative w-full h-[40vh] rounded-xl overflow-hidden">
             <Image
-              src="https://beaver-workshop-gallery.s3.amazonaws.com/Images/stairs1.png"
+              src="https://beaver-workshop-gallery.s3.amazonaws.com/images/stairs1.png"
               alt="Деревʼяні сходи з масиву — приклад робіт"
               fill
               className="object-cover"
@@ -66,7 +66,7 @@ export default function AboutUs() {
           {/* Фото 2 */}
           <div className="relative w-full h-[40vh] rounded-xl overflow-hidden">
             <Image
-              src="https://beaver-workshop-gallery.s3.amazonaws.com/Images/stairs3.png"
+              src="https://beaver-workshop-gallery.s3.amazonaws.com/images/stairs3.png"
               alt="Виготовлення та монтаж деревʼяних сходів і дверей"
               fill
               className="object-cover"
@@ -101,7 +101,7 @@ export default function AboutUs() {
           {/* Фото 3 */}
           <div className="relative w-full h-[40vh] rounded-xl overflow-hidden">
             <Image
-              src="https://beaver-workshop-gallery.s3.amazonaws.com/Images/stairs2.png"
+              src="https://beaver-workshop-gallery.s3.amazonaws.com/images/stairs2.png"
               alt="Власне деревообробне виробництво — Beaver Workshop"
               fill
               className="object-cover"
@@ -125,7 +125,7 @@ export default function AboutUs() {
           {/* Фото 4 */}
           <div className="relative w-full h-[40vh] rounded-xl overflow-hidden">
             <Image
-              src="https://beaver-workshop-gallery.s3.amazonaws.com/Images/stairs4.png"
+              src="https://beaver-workshop-gallery.s3.amazonaws.com/images/stairs4.png"
               alt="Реалізовані проєкти з натурального дерева"
               fill
               className="object-cover"
