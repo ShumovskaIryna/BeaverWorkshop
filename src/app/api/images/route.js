@@ -11,7 +11,7 @@ const s3Categories = ['Doors', 'others', 'Stairs', 'Tables&Cabinets', 'Windowsil
 async function getFilesFromCategory(category) {
   try {
     const encodedCategory = encodeURIComponent(category);
-    const response = await fetch(`https://beaver-workshop.s3.amazonaws.com/?list-type=2&prefix=portfolio/${encodedCategory}/&delimiter=/`);
+    const response = await fetch(`https://beaver-workshop-gallery.s3.amazonaws.com/?list-type=2&prefix=portfolio/${encodedCategory}/&delimiter=/`);
     
     if (!response.ok) {
       console.log(`Не вдалося отримати файли з категорії ${category}: ${response.status}`);
@@ -33,7 +33,7 @@ async function getFilesFromCategory(category) {
         /\.(jpg|jpeg|png|gif|webp|heic)$/i.test(key)
       )
       .map(key => ({
-        src: `https://beaver-workshop.s3.amazonaws.com/${encodeURI(key)}`,
+        src: `https://beaver-workshop-gallery.s3.amazonaws.com/${encodeURI(key)}`,
         category: categoryMapping[category] || category
       }));
     

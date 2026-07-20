@@ -8,7 +8,7 @@ export default function Coatings() {
       description:
         "Створює теплий природний вигляд деревини, підкреслює текстуру, приємна на дотик. Ідеально для столів, підвіконь і меблів.",
       imageSrc:
-        "https://beaver-workshop.s3.amazonaws.com/Images/oilwax.png",
+        "https://beaver-workshop-gallery.s3.amazonaws.com/Images/oilwax.png",
       tags: ["натуральність", "матовий блиск", "екологічність", "тактильність"],
       keywords: [
         "олія-віск для дерева",
@@ -23,7 +23,7 @@ export default function Coatings() {
       description:
         "Додає підвищений захист від подряпин і вологи, надає глянець і гладкість. Добре для дверей та сходинок.",
       imageSrc:
-        "https://beaver-workshop.s3.amazonaws.com/Images/strongwax.png",
+        "https://beaver-workshop-gallery.s3.amazonaws.com/Images/strongwax.png",
       tags: ["зносостійкість", "глянець", "вологостійкість", "простий догляд"],
       keywords: [
         "міцний віск для дерева",
@@ -38,7 +38,7 @@ export default function Coatings() {
       description:
         "Формує прозору захисну плівку з високою стійкістю до зносу. Рекомендовано для сходів, рейок та робочих поверхонь.",
       imageSrc:
-        "https://beaver-workshop.s3.amazonaws.com/Images/lacquer.png",
+        "https://beaver-workshop-gallery.s3.amazonaws.com/Images/lacquer.png",
       tags: ["макс. захист", "прозорість", "довговічність", "для сходів"],
       keywords: [
         "поліуретановий лак",
@@ -53,7 +53,7 @@ export default function Coatings() {
       description:
         "Кольорове двокомпонентне покриття з підвищеною стійкістю до зносу та вологи. Влучний вибір для яскравих інтер’єрів.",
       imageSrc:
-        "https://beaver-workshop.s3.amazonaws.com/Images/enamel.png",
+        "https://beaver-workshop-gallery.s3.amazonaws.com/Images/enamel.png",
       tags: ["кольорова", "двокомпонентна", "міцність", "вологостійкість"],
       keywords: [
         "2K емаль по дереву",
