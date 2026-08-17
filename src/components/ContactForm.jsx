@@ -72,7 +72,7 @@ export default function ContactForm() {
             <div className="relative w-full max-w-[520px] h-[260px] md:h-[360px]">
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-black/35 via-black/20 to-transparent" />
               <img
-                src="https://beaver-workshop-gallery.s3.amazonaws.com/images/bob2.png"
+                src="https://beaver-workshop-gallery.s3.eu-north-1.amazonaws.com/images/bob2.png"
                 className="relative z-10 w-full h-full object-contain"
                 alt="Бобер"
               />
